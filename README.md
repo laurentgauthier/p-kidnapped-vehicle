@@ -73,17 +73,15 @@ communicate with the simulator exchanging JSON-formatted messages.
 
 INPUT: values provided by the simulator to the c++ program
 
-* ["sensor_measurement"] => the measurement that the simulator observed (either lidar or radar)
+* ["sense_observations_x"] => x coordinates of the landmarks detected by the sensors
+* ["sense_observations_y"] => y coordinates of the landmarks detected bz the sensors
 
 
 OUTPUT: values provided by the c++ program to the simulator
 
-* ["estimate_x"] <= kalman filter estimated position x
-* ["estimate_y"] <= kalman filter estimated position y
-* ["rmse_x"]
-* ["rmse_y"]
-* ["rmse_vx"]
-* ["rmse_vy"]
+* ["best_particle_x"] <= best estimation of x for the vehicle position
+* ["best_particle_y"] <= best estimation of y for the vehicle position
+* ["best_particle_theta"] <= best estimation of the orientation of the vehicle
 
 ## Results
 
